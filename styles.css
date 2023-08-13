@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.heading {
+    font-size: 2em;
+    color: #ecf0f1;
+    text-shadow: 0px 0px 5px rgba(46, 204, 113, 0.9), 0px 0px 10px rgba(46, 204, 113, 0.8); /* Neon effect */
+    margin-bottom: 20px; /* Spacing from the calculator */
+    letter-spacing: 3px; /* Spacing between letters for a more techy look */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 15px;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0px 0px 5px rgba(46, 204, 113, 0.7), 0px 0px 10px rgba(46, 204, 113, 0.6);
+    }
+    to {
+        text-shadow:6px 6px 15px rgba(46, 204, 113, 1), 0px 0px 15px rgba(46, 204, 113, 0.9);
+    }
+}
+
+.calculator {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.7);
+    animation: fadeIn 1s forwards;
+    width: 320px;
+}
+
+.display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background: none;
+    border: none;
+    color: #FFF;
+    text-align: right;
+    width: 100%;
+    font-size: 24px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+button[data-value="CE"]:hover,
+button[data-value="C"]:hover,
+button[data-value="remove"]:hover {
+    background-color: #e74c3c;
+}
+
+button:hover {
+    background-color: #34495e;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #2c3e50;
+    transform: scale(0.95);
+}
+
+
+/* sdfghjkl; */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+
+/* Differentiating operation buttons */
+button[data-value="+"],
+button[data-value="-"],
+button[data-value="*"],
+button[data-value="/"],
+button[data-value="="],
+button[data-value="CE"],
+button[data-value="C"],
+button[data-value="remove"]  {
+    background-color: #34495e;
+}
+
+
+
+button[data-value="CE"]:hover,
+button[data-value="C"]:hover,
+button[data-value="remove"]:hover {
+    background-color: #e74c3c;
+}
+
+.zero-btn {
+    grid-column: 1 / span 2; /* Make it span 3 columns */
+}
